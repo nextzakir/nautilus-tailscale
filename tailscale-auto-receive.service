@@ -1,0 +1,11 @@
+[Unit]
+Description=Tailscale Auto-Receive Daemon
+After=network.target
+
+[Service]
+ExecStart=%h/.local/bin/tailscale_auto_receive.sh
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=default.target
